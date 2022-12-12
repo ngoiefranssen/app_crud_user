@@ -1,6 +1,7 @@
 import './App.css';
 import { Navbar } from './components/navbar/Navbar';
 import { Routes, Route } from 'react-router-dom';
+import { Home } from './components/home/Home';
 
 export default function App() {
 
@@ -9,7 +10,8 @@ export default function App() {
       <Navbar />
       <Routes>
         <Route path='/' element={<Home />} />
-      </Routes>
+        <Route path='/profil' element={</>} />
+    </Routes>
     </>
   );
 };
