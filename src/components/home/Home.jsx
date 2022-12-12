@@ -26,17 +26,17 @@ export const Home = () => {
                     <td>Beta</td>
                     <td>cassandra</td>
                     <td>
-                        <NavLink className="">
+                        <NavLink className="btn btn-dark btn-sm">
                             <i class="fa fa-edit" aria-hidden="true"></i>
                         </NavLink>
-                        <NavLink className="ms-2">
+                        <NavLink className="btn btn-success btn-sm ms-2">
                             <i class="fa fa-eye" aria-hidden="true"></i>
                         </NavLink>
-                        <NavLink className="btn btn-primary">
-
-                        </NavLink>
-                        <NavLink className="btn btn-primary">
-
+                        <NavLink className="btn btn-danger btn-sm ms-2">
+                            <i class="fa fa-trash" aria-hidden="true"></i>
+                        </NavLink>  
+                        <NavLink className="btn btn-primary ms-2 btn-sm">
+                            <i class="fa fa-user-circle-o" aria-hidden="true"></i>
                         </NavLink>
                     </td>
                     </tr>
