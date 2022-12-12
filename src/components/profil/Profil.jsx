@@ -26,39 +26,39 @@ export const Profil = () =>{
                                 <input type="text" className="form-control" value="" placeholder="surname" />
                             </div>
                         </div>
-                        <div className="row mt-3">
-                            <div className="col-md-12"><label className="labels">Mobile Number</label>
-                                <input type="text" className="form-control" placeholder="enter phone number" value="" />
+                        <div className="row mt-2">
+                            <div className="col-md-6"><label className="labels">Mobile Number</label>
+                                <input type="text" className="form-control" placeholder="enter phone number" value="name" />
                             </div>
-                            <div className="col-md-12"><label className="labels">Address Line 1</label>
-                                <input type="text" className="form-control" placeholder="enter address line 1" value="" />
+                            <div className="col-md-6"><label className="labels">Address Line 1</label>
+                                <input type="text" className="form-control" placeholder="enter address line 1" />
                             </div>
-                            <div className="col-md-12"><label className="labels">Address Line 2</label>
-                                <input type="text" className="form-control" placeholder="enter address line 2" value="" />
+                            <div className="col-md-6"><label className="labels">Address Line 2</label>
+                                <input type="text" className="form-control" placeholder="enter address line 2" />
                             </div>
-                            <div className="col-md-12"><label className="labels">Postcode</label>
-                                <input type="text" className="form-control" placeholder="enter address line 2" value="" />
+                            <div className="col-md-6"><label className="labels">Postcode</label>
+                                <input type="text" className="form-control" placeholder="enter address line 2" />
                             </div>
-                            <div className="col-md-12"><label className="labels">State</label>
-                                <input type="text" className="form-control" placeholder="enter address line 2" value="" />
+                            <div className="col-md-6"><label className="labels">State</label>
+                                <input type="text" className="form-control" placeholder="enter address line 2" />
                             </div>
-                            <div className="col-md-12"><label className="labels">Area</label>
-                                <input type="text" className="form-control" placeholder="enter address line 2" value="" />
+                            <div className="col-md-6"><label className="labels">Area</label>
+                                <input type="text" className="form-control" placeholder="enter address line 2" />
                             </div>
-                            <div className="col-md-12"><label className="labels">Email ID</label>
-                                <input type="text" className="form-control" placeholder="enter email id" value="" />
+                            <div className="col-md-6"><label className="labels">Email ID</label>
+                                <input type="text" className="form-control" placeholder="enter email id" />
                             </div>
-                            <div className="col-md-12"><label className="labels">Education</label>
-                                <input type="text" className="form-control" placeholder="education" value="" />
+                            <div className="col-md-6"><label className="labels">Education</label>
+                                <input type="text" className="form-control" placeholder="education"  />
                             </div>
                         </div>
                         <div className="row mt-3">
                             <div className="col-md-6"><label className="labels">Country</label>
-                            <input type="text" className="form-control" placeholder="country" value="" />
+                            <input type="text" className="form-control" placeholder="country" />
 
                             </div>
                             <div className="col-md-6"><label className="labels">State/Region</label>
-                            <input type="text" className="form-control" value="" placeholder="state" />
+                            <input type="text" className="form-control" placeholder="state" />
 
                             </div>
                         </div>
