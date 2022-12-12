@@ -1,10 +1,12 @@
+import { NavLink } from "react-router-dom";
+
 
 export const Home = () => {
     return (
         <div className="container my-5">
-            <button className="btn btn-outline-primary ">Add User</button>
+            <button className="btn btn-outline-primary">Add User</button>
             <table className="table my-4">
-                <thead>
+                <thead className="table table-dark">
                     <tr>
                     <th scope="col">#</th>
                     <th scope="col">Name</th>
@@ -24,15 +26,18 @@ export const Home = () => {
                     <td>Beta</td>
                     <td>cassandra</td>
                     <td>
-                        <button className="btn btn-primary">
+                        <NavLink className="">
+                            <i class="fa fa-edit" aria-hidden="true"></i>
+                        </NavLink>
+                        <NavLink className="ms-2">
+                            <i class="fa fa-eye" aria-hidden="true"></i>
+                        </NavLink>
+                        <NavLink className="btn btn-primary">
 
-                        </button>
-                        <button className="btn btn-primary">
+                        </NavLink>
+                        <NavLink className="btn btn-primary">
 
-                        </button>
-                        <button className="btn btn-primary">
-
-                        </button>
+                        </NavLink>
                     </td>
                     </tr>
                 </tbody>
