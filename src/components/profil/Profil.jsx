@@ -20,7 +20,7 @@ export const Profil = () =>{
                         </div>
                         <div className="row mt-2">
                             <div className="col-md-6"><label className="labels">Name
-                                </label><input type="text" className="form-control" placeholder="first name" value="" />
+                                </label><input type="text" className="form-control" placeholder="first name" />
                             </div>
                             <div className="col-md-6"><label className="labels">Surname</label>
                                 <input type="text" className="form-control" value="" placeholder="surname" />
@@ -28,7 +28,7 @@ export const Profil = () =>{
                         </div>
                         <div className="row mt-2">
                             <div className="col-md-6"><label className="labels">Mobile Number</label>
-                                <input type="text" className="form-control" placeholder="enter phone number" value="name" />
+                                <input type="text" className="form-control" placeholder="enter phone number" />
                             </div>
                             <div className="col-md-6"><label className="labels">Address Line 1</label>
                                 <input type="text" className="form-control" placeholder="enter address line 1" />
