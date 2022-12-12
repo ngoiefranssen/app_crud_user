@@ -23,9 +23,15 @@ export const Home = () => {
                     <td>Beta</td>
                     <td>cassandra</td>
                     <td>
-                        <button className="btn btn-primary"></button>
-                        <button className="btn btn-primary"></button>
-                        <button className="btn btn-primary"></button>
+                        <button className="btn btn-primary">
+
+                        </button>
+                        <button className="btn btn-primary">
+
+                        </button>
+                        <button className="btn btn-primary">
+                            
+                        </button>
                     </td>
                     </tr>
                 </tbody>
