@@ -32,6 +32,15 @@ export const Navbar = () =>{
                         Home
                         </NavLink>
                     </li>
+                    <li className="nav-item">
+                        <NavLink
+                        className="nav-Link active text-uppercase ms-3"
+                        aria-current="page"
+                        to="/list_user"
+                        >
+                        List user
+                        </NavLink>
+                    </li>
                     <li className="nav-item ms-3">
                         <NavLink
                         className="nav-Link active text-uppercase"
