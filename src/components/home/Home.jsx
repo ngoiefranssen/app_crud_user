@@ -1,8 +1,9 @@
 
 export const Home = () => {
     return (
-        <div className="container">
-            <table className="table">
+        <div className="container my-5">
+            <button className="btn btn-outline-primary ">Add User</button>
+            <table className="table my-4">
                 <thead>
                     <tr>
                     <th scope="col">#</th>
@@ -30,7 +31,7 @@ export const Home = () => {
 
                         </button>
                         <button className="btn btn-primary">
-                            
+
                         </button>
                     </td>
                     </tr>
