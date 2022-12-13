@@ -32,7 +32,7 @@ export const Navbar = () =>{
                         Home
                         </NavLink>
                     </li>
-                    {/* <li className="nav-item">
+                    <li className="nav-item">
                         <NavLink
                         className="nav-Link active text-uppercase ms-3"
                         aria-current="page"
@@ -40,12 +40,12 @@ export const Navbar = () =>{
                         >
                         List user
                         </NavLink>
-                    </li> */}
+                    </li>
                     <li className="nav-item ms-3">
                         <NavLink
                         className="nav-Link active text-uppercase"
                         aria-current="page"
-                        to="/profil"
+                        to="/about"
                         >
                         About
                         </NavLink>

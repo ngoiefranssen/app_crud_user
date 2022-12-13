@@ -2,6 +2,6 @@ import './style/profilStyle.css';
  
 export const About = () =>{
     return (
-        "Hello ! I'm profil"
+        "Hello ! I'm About"
     );
 };
