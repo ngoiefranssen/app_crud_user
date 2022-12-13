@@ -152,32 +152,19 @@ export const AddUser = () => {
                 </div>
               </div>
 
-              <div className="form-outline mb-4">
-                <input type="password" className="form-control" />
-              </div>
-
+              
+                <div className="col-md-12 mb-4">
+                  <div className="form-group mb-4">
+                    <input type="password" className="form-control" />
+                  </div>
+                  <div className="form-group mb-4">
+                    <input type="password" className="form-control" />
+                  </div>
+                </div>
+              
               <button type="submit" className="btn btn-outline-dark">
                 Register
               </button>
-
-              {/* <div className="text-center">
-                <p>or sign up with:</p>
-                <button type="button" className="btn btn-link btn-floating mx-1">
-                  <i className="fab fa-facebook-f"></i>
-                </button>
-
-                <button type="button" className="btn btn-link btn-floating mx-1">
-                  <i className="fab fa-google"></i>
-                </button>
-
-                <button type="button" className="btn btn-link btn-floating mx-1">
-                  <i className="fab fa-twitter"></i>
-                </button>
-
-                <button type="button" className="btn btn-link btn-floating mx-1">
-                  <i className="fab fa-github"></i>
-                </button>
-              </div> */}
             </form>
           </div>
         </div>
