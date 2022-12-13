@@ -12,11 +12,11 @@ export const ListUser = () =>{
     },[]);
 
     const fetchApiData = async () =>{
-        // const apiData = 'https://jsonplaceholder.typicode.com/users/user'
-        const resultApiData = await axios.get('https://jsonplaceholder.typicode.com/users');
+
+        const resultApiData = await axios.get('https://jsonplaceholder.typicode.com/users/user');
             setUser(resultApiData.data);
             // console.log(resultApiData)
-    };
+    }
 
     return(
         <div className="container my-5">
