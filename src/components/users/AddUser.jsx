@@ -24,7 +24,7 @@ export const AddUser = () => {
                 <div className="row">
                   <div className="col-md-6 mb-4">
                     <div className="form-outline">
-                      <input type="text"  className="form-control" />
+                      <input type="text" className="form-control" />
                       <label className="form-label" for="form3Example1">First name</label>
                     </div>
                   </div>
