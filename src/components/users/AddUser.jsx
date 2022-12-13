@@ -152,16 +152,14 @@ export const AddUser = () => {
                 </div>
               </div>
 
-              
+              <div className="row">
                 <div className="col-md-12 mb-4">
                   <div className="form-group mb-4">
-                    <input type="password" className="form-control" />
-                  </div>
-                  <div className="form-group mb-4">
-                    <input type="password" className="form-control" />
+                    <input type="text" className="form-control"
+                    placeholder='Enter your catchPhrase.........' />
                   </div>
                 </div>
-              
+              </div>
               <button type="submit" className="btn btn-outline-dark">
                 Register
               </button>
