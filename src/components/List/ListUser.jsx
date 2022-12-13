@@ -1,11 +1,21 @@
-import { useState } from "react";
+import axios from "axios";
+import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 
 export const ListUser = () =>{
 
-    const {user, setUser} = useState([])
+    const {user, setUser} = useState([]);
 
-    
+    useEffect(() => {
+        fetchApiData();
+    },[])
+
+    const fetchApiData = async () =>{
+        const apiData = 'https://jsonplaceholder.typicode.com/users'
+        resultData = await axios.get(apiData).then((res) =>{
+            setUser(resultData.data);
+        });
+    }
 
 
     return(
