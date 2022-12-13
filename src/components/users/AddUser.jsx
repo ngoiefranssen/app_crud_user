@@ -160,7 +160,7 @@ export const AddUser = () => {
                   </div>
                 </div>
               </div>
-              <button type="submit" className="btn btn-outline-dark">
+              <button type="submit" className="btn btn-outline-dark btn-right">
                 Register
               </button>
             </form>
