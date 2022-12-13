@@ -89,7 +89,6 @@ export const AddUser = () => {
         <div className="card bg-glass">
           <div className="card-body px-4 py-5 px-md-5">
             <form>
-              <!-- 2 column grid layout with text inputs for the first and last names -->
               <div className="row">
                 <div className="col-md-6 mb-4">
                   <div className="form-outline">
@@ -116,7 +115,7 @@ export const AddUser = () => {
               </div>
 
               <div className="form-check d-flex justify-content-center mb-4">
-                <input className="form-check-input me-2" type="checkbox" value="" id="form2Example33" checked />
+                <input className="form-check-input me-2" type="checkbox" value="" id="form2Example33"/>
                 <label className="form-check-label" for="form2Example33">
                   Subscribe to our newsletter
                 </label>
@@ -151,6 +150,5 @@ export const AddUser = () => {
     </div>
   </div>
 </section>
-<!-- Section: Design Block -->
  );
 };
