@@ -160,14 +160,8 @@ export const AddUser = () => {
                   </div>
                 </div>
               </div>
-              <div class="container">
-    <div className="row">
-        <div className="col-md-12 bg-light text-right">
             <button type="button" className="btn btn-primary">Cancel</button>
             <button type="button" className="btn btn-warning">Save</button>
-        </div>
-    </div>
-</div>
             </form>
           </div>
         </div>
