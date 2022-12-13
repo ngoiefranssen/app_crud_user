@@ -12,11 +12,10 @@ export const ListUser = () =>{
 
     const fetchApiData = async () =>{
         const apiData = 'https://jsonplaceholder.typicode.com/users'
-        const resultData = await axios.get(apiData).then((res) =>{
-            setUser(resultData.data);
+        const resultApiData = await axios.get(apiData).then((res) =>{
+            setUser(resultApiData.data);
         });
-    }
-
+    };
 
     return(
         <div className="container my-5">
@@ -34,6 +33,9 @@ export const ListUser = () =>{
                     </tr>
                 </thead>
                 <tbody>
+                    {
+                        user?.map(())
+                    }
                     <tr>
                         <th scope="row">1</th>
                         <td>Ngoie</td>
@@ -41,20 +43,20 @@ export const ListUser = () =>{
                         <td>@mdo</td>
                         <td>Beta</td>
                         <td>cassandra</td>
-                    <td>
-                        <NavLink className="btn btn-dark btn-sm">
-                            <i className="fa fa-edit" aria-hidden="true"></i>
-                        </NavLink>
-                        <NavLink className="btn btn-success btn-sm ms-2">
-                            <i className="fa fa-eye" aria-hidden="true"></i>
-                        </NavLink>
-                        <NavLink className="btn btn-danger btn-sm ms-2">
-                            <i className="fa fa-trash" aria-hidden="true"></i>
-                        </NavLink>  
-                        <NavLink className="btn btn-primary ms-2 btn-sm">
-                            <i className="fa fa-user-circle-o" aria-hidden="true"></i>
-                        </NavLink>
-                    </td>
+                        <td>
+                            <NavLink className="btn btn-dark btn-sm">
+                                <i className="fa fa-edit" aria-hidden="true"></i>
+                            </NavLink>
+                            <NavLink className="btn btn-success btn-sm ms-2">
+                                <i className="fa fa-eye" aria-hidden="true"></i>
+                            </NavLink>
+                            <NavLink className="btn btn-danger btn-sm ms-2">
+                                <i className="fa fa-trash" aria-hidden="true"></i>
+                            </NavLink>  
+                            <NavLink className="btn btn-primary ms-2 btn-sm">
+                                <i className="fa fa-user-circle-o" aria-hidden="true"></i>
+                            </NavLink>
+                        </td>
                     </tr>
                 </tbody>
             </table>
