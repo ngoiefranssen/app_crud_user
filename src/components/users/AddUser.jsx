@@ -91,27 +91,65 @@ export const AddUser = () => {
             <form>
               <div className="row">
                 <div className="col-md-4 mb-4">
-                  <div className="form-outline">
+                  <div className="form-group">
                     <input type="text" className="form-control"
                             placeholder='Enter your name...' />
                   </div>
                 </div>
                 <div className="col-md-4 mb-4">
-                  <div className="form-outline">
+                  <div className="form-group">
                     <input type="text"  className="form-control"
                             placeholder='Enter your username....'/>
                   </div>
                 </div>
                 <div className="col-md-4 mb-4">
-                  <div className="form-outline">
-                    <input type="text" className="form-control"
+                  <div className="form-group">
+                    <input type="email" className="form-control"
                            placeholder='Enter your adress email...' />
                   </div>
                 </div>
               </div>
 
-              <div className="form-outline mb-4">
-                <input type="email" className="form-control" />
+              <div className="row">
+                <div className="col-md-4 mb-4">
+                  <div className="form-outline">
+                    <input type="text" className="form-control"
+                            placeholder='Enter your street .....' />
+                  </div>
+                </div>
+                <div className="col-md-4 mb-4">
+                  <div className="form-outline">
+                    <input type="text"  className="form-control"
+                            placeholder='Enter your suite....'/>
+                  </div>
+                </div>
+                <div className="col-md-4 mb-4">
+                  <div className="form-outline">
+                    <input type="text" className="form-control"
+                           placeholder='Enter your adress city......' />
+                  </div>
+                </div>
+              </div>
+
+              <div className="row">
+                <div className="col-md-4 mb-4">
+                  <div className="form-outline">
+                    <input type="number" className="form-control"
+                            placeholder='Enter your zipcode .....' />
+                  </div>
+                </div>
+                <div className="col-md-4 mb-4">
+                  <div className="form-outline">
+                    <input type="number"  className="form-control"
+                            placeholder='Enter your phone number....'/>
+                  </div>
+                </div>
+                <div className="col-md-4 mb-4">
+                  <div className="form-outline">
+                    <input type="text" className="form-control"
+                           placeholder='Enter your name company......' />
+                  </div>
+                </div>
               </div>
 
               <div className="form-outline mb-4">
