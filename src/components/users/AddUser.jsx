@@ -156,7 +156,7 @@ export const AddUser = () => {
                 <div className="col-md-12 mb-4">
                   <div className="form-group mb-4">
                     <input type="text" className="form-control"
-                    placeholder='Enter your catchPhrase.........' />
+                    placeholder='Enter your catch phrase.........' />
                   </div>
                 </div>
               </div>
