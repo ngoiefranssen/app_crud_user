@@ -23,8 +23,7 @@ export const ListUser = () =>{
     return(
         <div className="container my-5">
             <NavLink to='/add_user' type="button" className="btn btn-outline-primary"
-                     data-bs-toggle="modal" data-bs-target="#exampleModal" 
-                    data-bs-whatever="@mdo">Add User
+                    >Add User
             </NavLink>
             <table className="table border shadow my-4">
                 <thead className="table table-dark">
@@ -42,7 +41,7 @@ export const ListUser = () =>{
                     {
                         users?.map((user, index) =>(
                             <tr>
-                                <th scope="row" key={index}>{index + 1}</th>
+                                <th scope="row" key={index.id}>{index + 1}</th>
                                 <td>{user.name}</td>
                                 <td>{user.username}</td>
                                 <td>{user.email}</td>
