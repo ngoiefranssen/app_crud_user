@@ -1,26 +1,31 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { NavLink, useParams } from "react-router-dom";
+import { NavLink} from "react-router-dom";
+
 
 export const ListUser = () =>{
 
-    const {id} = useParams();
-    const {users, setUser} = useState([]);
+    // const {id} = useParams();
+   const {users, setUser} = useState([]);
 
-    useEffect(() => {
-        fetchApiData();
-    },[]);
+   
+   useEffect(() => {
+        fetchDataApi();
+   },[])
 
-    const fetchApiData = async () =>{
+   const fetchDataApi = async () =>{
+        const apiResultData = await axios.get('https://jsonplaceholder.typicode.com/users');
+        setUser(apiResultData.data);
+   };
 
-        const resultApiData = await axios.get('https://jsonplaceholder.typicode.com/users/user');
-            setUser(resultApiData.data);
-            // console.log(resultApiData)
-    }
+   // delete user
 
     return(
         <div className="container my-5">
-            <button className="btn btn-outline-primary">Add User</button>
+            <NavLink to='/add_user' type="button" className="btn btn-outline-primary"
+                     data-bs-toggle="modal" data-bs-target="#exampleModal" 
+                    data-bs-whatever="@mdo">Add User
+            </NavLink>
             <table className="table border shadow my-4">
                 <thead className="table table-dark">
                     <tr>
@@ -62,6 +67,9 @@ export const ListUser = () =>{
                     }
                 </tbody>
             </table>
+            {/* <Routes>
+                <Route path="" />
+            </Routes> */}
         </div>
     )
 };
