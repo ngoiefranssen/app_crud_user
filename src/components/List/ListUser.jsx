@@ -12,7 +12,7 @@ export const ListUser = () =>{
 
     const fetchApiData = async () =>{
         const apiData = 'https://jsonplaceholder.typicode.com/users'
-        resultData = await axios.get(apiData).then((res) =>{
+        const resultData = await axios.get(apiData).then((res) =>{
             setUser(resultData.data);
         });
     }
