@@ -82,7 +82,7 @@ export const AddUser = () => {
                 </div>
                 <div className="col-md-4 mb-4">
                   <div className="form-group">
-                    <input type="text" className="form-control" name='email'
+                    <input type="email" className="form-control" name='email'
                            placeholder='Enter your adress email...' 
                            value={email}
                            onChange={(e) => onInputchange(e)}/>
@@ -120,7 +120,7 @@ export const AddUser = () => {
               <div className="row">
                 <div className="col-md-4 mb-4">
                   <div className="form-group">
-                    <input type="number" className="form-control" name='zipcode'
+                    <input type="text" className="form-control" name='zipcode'
                             placeholder='Enter your zipcode .....'
                             value={zipcode}
                             onChange={(e) => onInputchange(e)} />
@@ -128,7 +128,7 @@ export const AddUser = () => {
                 </div>
                 <div className="col-md-4 mb-4">
                   <div className="form-group">
-                    <input type="number"  className="form-control" name='phone'
+                    <input type="text"  className="form-control" name='phone'
                             placeholder='Enter your phone number....'
                             value={phone}
                             onChange={(e) => onInputchange(e)} />
@@ -144,7 +144,7 @@ export const AddUser = () => {
                 </div> */}
                 <div className="col-md-4 mb-4">
                   <div className="form-group mb-4">
-                    <input type="text" className="form-control" name='catchPrase'
+                    <textarea type="text" className="form-control" name='catchPrase'
                            placeholder='Enter your catch phrase.........'
                            value={catchPrase}
                            onChange={(e) => onInputchange(e)} />
