@@ -69,7 +69,7 @@ export const AddUser = () => {
                 <div className="col-md-4 mb-4">
                   <div className="form-group">
                     <input type="text" className="form-control"
-                            placeholder='Enter your name...' name='names'
+                            placeholder='Enter your name...' name='name'
                             value={name}
                             onChange={(e) => onInputchange(e)} />
                   </div>
@@ -77,7 +77,7 @@ export const AddUser = () => {
                 <div className="col-md-4 mb-4">
                   <div className="form-group">
                     <input type="text"  className="form-control"
-                            placeholder='Enter your username....' name='name'
+                            placeholder='Enter your username....' name='username'
                             value={username}
                             onChange={(e) => onInputchange(e)}/>
                   </div>
@@ -144,10 +144,7 @@ export const AddUser = () => {
                            onChange={(e) => onInputchange(e)} />
                   </div>
                 </div> */}
-              </div>
-
-              <div className="row">
-                <div className="col-md-12 mb-4">
+                <div className="col-md-4 mb-4">
                   <div className="form-group mb-4">
                     <input type="text" className="form-control" name='catchPrase'
                            placeholder='Enter your catch phrase.........'
@@ -156,6 +153,17 @@ export const AddUser = () => {
                   </div>
                 </div>
               </div>
+
+              {/* <div className="row">
+                <div className="col-md-4 mb-4">
+                  <div className="form-group mb-4">
+                    <input type="text" className="form-control" name='catchPrase'
+                           placeholder='Enter your catch phrase.........'
+                           value={catchPrase}
+                           onChange={(e) => onInputchange(e)} />
+                  </div>
+                </div>
+              </div> */}
               <NavLink to='/list_user' type="button" className="btn btn-outline-dark">
                 Cancel
               </NavLink>
