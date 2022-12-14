@@ -63,7 +63,7 @@ export const ListUser = () =>{
                                     <NavLink to={`/edit_user/${user.id}`} className="btn btn-dark btn-sm">
                                         <i className="fa fa-edit" ></i>
                                     </NavLink>
-                                    <NavLink className="btn btn-success btn-sm ms-2">
+                                    <NavLink to={`/view_user/${user.id}`} className="btn btn-success btn-sm ms-2">
                                         <i className="fa fa-eye"></i>
                                     </NavLink>
                                     <button onClick={() => deleteUser(user.id)} className="btn btn-danger btn-sm ms-2">
