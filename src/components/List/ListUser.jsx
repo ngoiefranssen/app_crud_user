@@ -60,11 +60,10 @@ export const ListUser = () =>{
                                 {/* <td>{user.phone}</td> */}
                                 {/* <td>{user.company.catchPhrase}</td> */}
                                 <td>
-                                    <NavLink className="btn btn-dark btn-sm">
+                                    <NavLink to={`/edit_user/${user.id}`} className="btn btn-dark btn-sm">
                                         <i className="fa fa-edit" ></i>
                                     </NavLink>
-                                    <NavLink  to={`/edit_user/${user.id}`} 
-                                              className="btn btn-success btn-sm ms-2">
+                                    <NavLink className="btn btn-success btn-sm ms-2">
                                         <i className="fa fa-eye"></i>
                                     </NavLink>
                                     <NavLink to={`/list_user/${user.id}`} className="btn btn-danger btn-sm ms-2">

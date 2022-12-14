@@ -17,7 +17,7 @@ export default function App() {
         <Route path='/about' element={<About />} />
         <Route path='/list_user' element={<ListUser />} />
         <Route path='/add_user' element={<AddUser />} />
-        <Route path='/edit_user/:id' elemen={<EditUser />} />
+        <Route path='/edit_user/:id' element={<EditUser />} />
       </Routes>
     </>
   );
