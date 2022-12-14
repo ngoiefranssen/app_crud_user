@@ -66,7 +66,7 @@ export const ListUser = () =>{
                                     <NavLink className="btn btn-success btn-sm ms-2">
                                         <i className="fa fa-eye"></i>
                                     </NavLink>
-                                    <button to={`/list_user/${user.id}`} className="btn btn-danger btn-sm ms-2">
+                                    <button onClick={() => deleteUser(user.id)} className="btn btn-danger btn-sm ms-2">
                                         <i className="fa fa-trash"></i>
                                     </button>  
                                     <NavLink className="btn btn-primary ms-2 btn-sm">
