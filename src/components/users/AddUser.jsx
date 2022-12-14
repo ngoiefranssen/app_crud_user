@@ -42,7 +42,7 @@ export const AddUser = () => {
   // lors du changement d'entrée
   const onInputchange = (e) => {
     e.preventDefault();
-    setUser({...user, [e.target.name] : e.target.value });
+    setUser({ ...user, [e.target.name] : e.target.value });
   };
 
   // 
