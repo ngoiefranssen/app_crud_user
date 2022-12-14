@@ -6,7 +6,7 @@ import { NavLink, useParams} from "react-router-dom";
 export const ListUser = () =>{
 
    const {id} = useParams();
-   const [users, setUsers] = useState();
+   const [users, setUsers] = useState([]);
 
    
    useEffect(() => {
@@ -25,7 +25,7 @@ export const ListUser = () =>{
    }
 
     return(
-        <div className="container my-5">
+        <div className="container my-5"> {/** style={{ background:"hsl(220, 29%, 84%)" }}s */}
             <NavLink to='/add_user' type="button" className="btn btn-outline-primary"
                     >Add User
             </NavLink>
@@ -66,9 +66,9 @@ export const ListUser = () =>{
                                     <NavLink className="btn btn-success btn-sm ms-2">
                                         <i className="fa fa-eye"></i>
                                     </NavLink>
-                                    <NavLink to={`/list_user/${user.id}`} className="btn btn-danger btn-sm ms-2">
+                                    <button to={`/list_user/${user.id}`} className="btn btn-danger btn-sm ms-2">
                                         <i className="fa fa-trash"></i>
-                                    </NavLink>  
+                                    </button>  
                                     <NavLink className="btn btn-primary ms-2 btn-sm">
                                         <i className="fa fa-user-circle-o"></i>
                                     </NavLink>
