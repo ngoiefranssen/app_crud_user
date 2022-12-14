@@ -95,7 +95,7 @@ export const ViewUser = () =>{
                         <p className="mb-0">Full Name</p>
                         </div>
                         <div className="col-sm-9">
-                        <p className="text-muted mb-0">Johnatan Smith</p>
+                        <p className="text-muted mb-0">{ viewUser.name + " " + viewUser.username }</p>
                         </div>
                     </div>
                     <hr />
@@ -104,7 +104,7 @@ export const ViewUser = () =>{
                         <p className="mb-0">Email</p>
                         </div>
                         <div className="col-sm-9">
-                        <p className="text-muted mb-0">example@example.com</p>
+                        <p className="text-muted mb-0">{ viewUser.email }</p>
                         </div>
                     </div>
                     <hr />
@@ -113,7 +113,7 @@ export const ViewUser = () =>{
                         <p className="mb-0">Phone</p>
                         </div>
                         <div className="col-sm-9">
-                        <p className="text-muted mb-0">(097) 234-5678</p>
+                        <p className="text-muted mb-0">{ viewUser.phone }</p>
                         </div>
                     </div>
                     <hr />
