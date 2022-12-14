@@ -5,7 +5,7 @@ import axios from 'axios';
 
 export const AddUser = () => {
 
-  const navigate = useNavigate();
+  let navigate = useNavigate();
   // const nameCompany = company.name;
 
   const [user, setUser] = useState({
@@ -48,7 +48,6 @@ export const AddUser = () => {
 
   // sur soumettre  
   const onSubmit = async (e) => {
-    
       e.preventDefault();
       await axios.post('https://jsonplaceholder.typicode.com/users', user);
       navigate('/list_user');
