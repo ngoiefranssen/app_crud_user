@@ -8,18 +8,18 @@ export const AddUser = () => {
   const navigate = useNavigate();
   // const nameCompany = company.name;
 
-  const [user, setUser] = useState({
-    name: "",
-    username: "",
-    email: "",
-    street: "",
-    suite: "",
-    city: "",
-    zipcode: "",
-    phone: "",
+  const [user, setUser] = useState([
+    name= "",
+    username= "",
+    email= "",
+    street= "",
+    suite= "",
+    city= "",
+    zipcode= "",
+    phone= "",
     // nameCompany:"",
-    catchPrase:"",
-  });
+    catchPrase= "",
+  ]);
 
   // const handleChange = (e) =>{
   //   const name = e.target.name;

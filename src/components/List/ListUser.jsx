@@ -6,7 +6,7 @@ import { NavLink} from "react-router-dom";
 export const ListUser = () =>{
 
     // const {id} = useParams();
-   const [users, setUser] = useState([]);
+   const [users, setUsers] = useState([]);
 
    
    useEffect(() => {
@@ -15,7 +15,7 @@ export const ListUser = () =>{
 
    const fetchDataApi = async () =>{
         const apiResultData = await axios.get('https://jsonplaceholder.typicode.com/users');
-        setUser(apiResultData.data);
+        setUsers(apiResultData.data);
    };
 
    // delete user
