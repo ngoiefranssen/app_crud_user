@@ -146,16 +146,13 @@ export const AddUser = () => {
                 </div> */}
               </div>
 
-              <div className="row">
-                <div className="col-md-12 mb-4">
+              
                   <div className="form-group mb-4">
                     <input type="text" className="form-control" name='catchPrase'
                            placeholder='Enter your catch phrase.........'
                            value={catchPrase}
                            onChange={(e) => onInputchange(e)} />
                   </div>
-                </div>
-              </div>
               <NavLink to='/list_user' type="button" className="btn btn-outline-dark">
                 Cancel
               </NavLink>
