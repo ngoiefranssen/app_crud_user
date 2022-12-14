@@ -1,71 +1,61 @@
 import './style/userStyle.css';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
+import { useState } from 'react';
+import axios from 'axios';
 
 export const AddUser = () => {
 
+  const navigate = useNavigate();
+  const nameCompany = company.name;
+
+  const [user, setUser] = useState({
+    name: "",
+    username: "",
+    email: "",
+    street: "",
+    suite: "",
+    city: "",
+    zipcode: "",
+    phone: "",
+    nameCompany:"",
+    catchPrase:"",
+  });
+
+  // const handleChange = (e) =>{
+  //   const name = e.target.name;
+  //   const value = e.target.value;
+
+  //   if(name)
+  //   {
+
+  //   }else{
+
+  //   };
+  // };
+
+
+
+  const { name, username, 
+          email, street, suite, city, zipcode, 
+          phone,  catchPrase } = user;
+
+  // lors du changement d'entrée
+  const onInputchange = (e) => {
+    e.preventDefault();
+    setUser({...user, [e.target.name] : e.target.value });
+  };
+
+  // 
+
+  // sur soumettre  
+  const onSubmit = async (e) => {
+    
+      e.preventDefault();
+      await axios.post('https://jsonplaceholder.typicode.com/users', user);
+      navigate('/');
+  };
+
   return (
-    // <section classNameName="text-center my-5">
-    //   {/* <div classNameName="p-5 bg-image" style={{ backgroundImage: 
-    //   "url('https://mdbootstrap.com/img/new/textures/full/171.jpg')",
-    //         height: "200px" }}>
-    //   </div> */}
-
-    //   <div classNameName="card mx-5 mx-md-5 shadow-5-strong" style={{
-    //        padingTop:"-100px", background:"hsla(0, 0%, 100%, 0.8)",
-    //        backdropFilter:"blur(20px)"
-    //   }}>
-    //     <div classNameName="card-body py-5 px-md-5">
-
-    //       <div classNameName="row d-flex justify-content-center">
-    //         <div classNameName="col-lg-6">
-    //           <h2 classNameName="fw-bold mb-5">Sign up now</h2>
-    //           <form>
-    //             <div classNameName="row">
-    //               <div classNameName="col-md-5 mb-4">
-    //                 <div classNameName="form-outline">
-    //                   <input type="text" classNameName="form-control" />
-    //                 </div>
-                    
-    //               </div>
-    //               <div classNameName="col-md-5 mb-4">
-    //                 <div classNameName="form-outline">
-    //                   <input type="text" classNameName="form-control" />
-    //                 </div>
-    //               </div>
-    //               <div classNameName="col-md-5 mb-4">
-    //                 <div classNameName="form-outline">
-    //                   <input type="text" classNameName="form-control" />
-    //                 </div>
-    //               </div>
-    //             </div>
-    //             <div classNameName="row">
-    //               <div classNameName="col-md-5 mb-4">
-    //                 <div classNameName="form-outline">
-    //                   <input type="text" classNameName="form-control" />
-    //                 </div>
-                    
-    //               </div>
-    //               <div classNameName="col-md-5 mb-4">
-    //                 <div classNameName="form-outline">
-    //                   <input type="text" classNameName="form-control" />
-    //                 </div>
-    //               </div>
-    //               <div classNameName="col-md-5 mb-4">
-    //                 <div classNameName="form-outline">
-    //                   <input type="text" classNameName="form-control" />
-    //                 </div>
-    //               </div>
-    //             </div>
-
-    //             <button type="submit" classNameName="btn btn-primary btn-block mb-4">
-    //               Sign up
-    //             </button>
-    //           </form>
-    //         </div>
-    //       </div>
-    //     </div>
-    //   </div>
-    // </section>
 
 <section className="background-radial-gradient overflow-hidden">
   <div className="container px-4 py-5 px-md-5 text-center text-lg-start my-5">
@@ -74,66 +64,84 @@ export const AddUser = () => {
 
         <div className="card">
           <div className="card-body px-4 py-5">
-            <form>
+            <form onSubmit={(e) =>  onSubmit(e)}>
               <div className="row">
                 <div className="col-md-4 mb-4">
                   <div className="form-group">
                     <input type="text" className="form-control"
-                            placeholder='Enter your name...' />
+                            placeholder='Enter your name...' name='nameUser'
+                            value={name}
+                            onChange={(e) => onInputchange(e)} />
                   </div>
                 </div>
                 <div className="col-md-4 mb-4">
                   <div className="form-group">
                     <input type="text"  className="form-control"
-                            placeholder='Enter your username....'/>
+                            placeholder='Enter your username....' name='name'
+                            value={username}
+                            onChange={(e) => onInputchange(e)}/>
                   </div>
                 </div>
                 <div className="col-md-4 mb-4">
                   <div className="form-group">
-                    <input type="email" className="form-control"
-                           placeholder='Enter your adress email...' />
+                    <input type="email" className="form-control" name='email'
+                           placeholder='Enter your adress email...' 
+                           value={email}
+                           onChange={(e) => onInputchange(e)}/>
                   </div>
                 </div>
               </div>
 
               <div className="row">
                 <div className="col-md-4 mb-4">
-                  <div className="form-outline">
-                    <input type="text" className="form-control"
-                            placeholder='Enter your street .....' />
+                  <div className="form-group">
+                    <input type="text" className="form-control" name='street'
+                            placeholder='Enter your street .....'
+                            value={street}
+                            onChange={(e) => onInputchange(e)}/>
                   </div>
                 </div>
                 <div className="col-md-4 mb-4">
-                  <div className="form-outline">
-                    <input type="text"  className="form-control"
-                            placeholder='Enter your suite....'/>
+                  <div className="form-group">
+                    <input type="text"  className="form-control" name='suite'
+                            placeholder='Enter your suite....'
+                            value={suite}
+                            onChange={(e) => onInputchange(e)}/>
                   </div>
                 </div>
                 <div className="col-md-4 mb-4">
-                  <div className="form-outline">
-                    <input type="text" className="form-control"
-                           placeholder='Enter your adress city......' />
+                  <div className="form-group">
+                    <input type="text" className="form-control" name='city'
+                           placeholder='Enter your adress city......'
+                           value={city}
+                           onChange={(e) => onInputchange(e)} />
                   </div>
                 </div>
               </div>
 
               <div className="row">
                 <div className="col-md-4 mb-4">
-                  <div className="form-outline">
-                    <input type="number" className="form-control"
-                            placeholder='Enter your zipcode .....' />
+                  <div className="form-group">
+                    <input type="number" className="form-control" name='zipcode'
+                            placeholder='Enter your zipcode .....'
+                            value={zipcode}
+                            onChange={(e) => onInputchange(e)} />
                   </div>
                 </div>
                 <div className="col-md-4 mb-4">
-                  <div className="form-outline">
-                    <input type="number"  className="form-control"
-                            placeholder='Enter your phone number....'/>
+                  <div className="form-group">
+                    <input type="number"  className="form-control" name='phone'
+                            placeholder='Enter your phone number....'
+                            value={phone}
+                            onChange={(e) => onInputchange(e)} />
                   </div>
                 </div>
                 <div className="col-md-4 mb-4">
-                  <div className="form-outline">
-                    <input type="text" className="form-control"
-                           placeholder='Enter your name company......' />
+                  <div className="form-group">
+                    <input type="text" className="form-control" name='name'
+                           placeholder='Enter your name company......'
+                           value={name}
+                           onChange={(e) => onInputchange(e)} />
                   </div>
                 </div>
               </div>
@@ -141,8 +149,10 @@ export const AddUser = () => {
               <div className="row">
                 <div className="col-md-12 mb-4">
                   <div className="form-group mb-4">
-                    <input type="text" className="form-control"
-                    placeholder='Enter your catch phrase.........' />
+                    <input type="text" className="form-control" name='catchPrase'
+                           placeholder='Enter your catch phrase.........'
+                           value={catchPrase}
+                           onChange={(e) => onInputchange(e)} />
                   </div>
                 </div>
               </div>
