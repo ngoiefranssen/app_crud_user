@@ -122,7 +122,7 @@ export const ViewUser = () =>{
                         <p className="mb-0">Mobile</p>
                         </div>
                         <div className="col-sm-9">
-                        <p className="text-muted mb-0">(098) 765-4321</p>
+                        <p className="text-muted mb-0">{ viewUser.phone }</p>
                         </div>
                     </div>
                     <hr />
@@ -131,7 +131,14 @@ export const ViewUser = () =>{
                         <p className="mb-0">Address</p>
                         </div>
                         <div className="col-sm-9">
-                        <p className="text-muted mb-0">Bay Area, San Francisco, CA</p>
+                        <p className="text-muted mb-0">
+                            {   
+                                viewUser.company.street + " " + 
+                                viewUser.company.suite + " " + 
+                                viewUser.company.city + " " +
+                                viewUser.company.zipcode
+                            }
+                        </p>
                         </div>
                     </div>
                     </div>
@@ -191,7 +198,7 @@ export const ViewUser = () =>{
                             aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                         <p className="mt-4 mb-1" style={{ fontSize: ".77rem;" }}>Mobile Template</p>
-                        <div className="progress rounded" style={{ height: "5px;" }}>
+                        <div className="progress rounded" style={{ height: "5px" }}>
                             <div className="progress-bar" role="progressbar" style={{ width: "55%" }} aria-valuenow="55"
                             aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
