@@ -22,9 +22,9 @@ export const ViewUser = () =>{
     },[]);
 
     const fecthViewUser = async () => {
-        const resultViewData = await axios.get(`https://jsonplaceholder.typicode.com/users/${id}`)
+        const resultViewData = await axios.get(`https://jsonplaceholder.typicode.com/users/${id}`);
         setViewUser(resultViewData.data);
-    }
+    };
     
     return(
         <section style={{ background:"#eee" }}>
@@ -149,12 +149,12 @@ export const ViewUser = () =>{
                         <div className="card-body">
                         <p className="mb-4"><span className="text-primary font-italic me-1">assigment</span> Project Status
                         </p>
-                        <p className="mb-1" style="font-size: .77rem;">Web Design</p>
-                        <div className="progress rounded" style="height: 5px;">
+                        <p className="mb-1" style={{ fontSize: ".77rem" }}>Web Design</p>
+                        <div className="progress rounded" style={{ height: "5px" }}>
                             <div className="progress-bar" role="progressbar" style={{ width: "80%" }} aria-valuenow="80"
                             aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
-                        <p className="mt-4 mb-1" style="font-size: .77rem;">Website Markup</p>
+                        <p className="mt-4 mb-1" style={{ fontSize: ".77rem" }}>Website Markup</p>
                         <div className="progress rounded" style={{ height: "5px;" }}>
                             <div className="progress-bar" role="progressbar" style={{ width: "72%" }} aria-valuenow="72"
                             aria-valuemin="0" aria-valuemax="100"></div>
@@ -202,7 +202,7 @@ export const ViewUser = () =>{
                             <div className="progress-bar" role="progressbar" style={{ width: "55%" }} aria-valuenow="55"
                             aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
-                        <p className="mt-4 mb-1" style={{ fontSize: ".77rem;"}}>Backend API</p>
+                        <p className="mt-4 mb-1" style={{ fontSize: ".77rem"}}>Backend API</p>
                         <div className="progress rounded mb-2" style={{ height: "5px;" }}>
                             <div className="progress-bar" role="progressbar" style={{ width: "s66%" }} aria-valuenow="66"
                             aria-valuemin="0" aria-valuemax="100"></div>

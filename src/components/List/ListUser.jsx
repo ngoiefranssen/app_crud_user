@@ -19,7 +19,7 @@ export const ListUser = () =>{
    };
 
    // delete user
-   const deleteUser = async (id) =>{
+   const deleteUser = async () =>{
     axios.delete(`https://jsonplaceholder.typicode.com/users/${id}`);
     fetchDataApi();
    }
