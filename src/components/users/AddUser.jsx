@@ -144,7 +144,7 @@ export const AddUser = () => {
                 </div> */}
                 <div className="col-md-4 mb-4">
                   <div className="form-group mb-4">
-                    <textarea type="text" className="form-control" name='catchPrase'
+                    <input type="text" className="form-control" name='catchPrase'
                            placeholder='Enter your catch phrase.........'
                            value={catchPrase}
                            onChange={(e) => onInputchange(e)} />
