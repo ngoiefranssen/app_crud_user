@@ -41,7 +41,7 @@ export const ListUser = () =>{
                     {
                         users.map((user, index) =>(
                             <tr>
-                                <th scope="row" key={index.id}>{index + 1}</th>
+                                <th scope="row" key={user.id}>{index + 1}</th>
                                 <td>{user.name}</td>
                                 <td>{user.username}</td>
                                 <td>{user.email}</td>
