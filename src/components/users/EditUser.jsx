@@ -1,4 +1,5 @@
 import axios from "axios";
+import { useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
 
@@ -24,6 +25,10 @@ export const EditUser = () =>{
     const { name, username, 
             email, street, suite, city, zipcode, 
             phone, catchPrase } = user;
+
+    useEffect(() => {
+        loadingUserData()
+    }, []);
   
     // lors du changement d'entrée
     const onInputchange = (e) => {
@@ -42,7 +47,7 @@ export const EditUser = () =>{
 
     // 
     loadingUserData = async () =>{
-        const resultApiDadta = await axios.get('https://jsonplaceholder.typicode.com/users');
+        const resultApiDadta = await axios.get(`https://jsonplaceholder.typicode.com/users/${id}`);
         setUser(resultApiDadta.data);
     }
   
