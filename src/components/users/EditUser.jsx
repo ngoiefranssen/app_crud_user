@@ -1,11 +1,13 @@
-import { useParams } from "react-router-dom";
+import axios from "axios";
+import { useNavigate, useParams } from "react-router-dom";
 
 
 export const EditUser = () =>{
     
     
     let navigate = useNavigate();
-    const {id} = useParams()
+    const {id} = useParams();
+
     const [user, setUser] = useState({
       name: "",
       username: "",
@@ -34,9 +36,15 @@ export const EditUser = () =>{
     // sur soumettre  
     const onSubmit = async (e) => {
         e.preventDefault();
-        await axios.post('https://jsonplaceholder.typicode.com/users', user);
+        await axios.put(`https://jsonplaceholder.typicode.com/users/${id}`, user);
         navigate('/list_user');
     };
+
+    // 
+    loadingUserData = async () =>{
+        const resultApiDadta = await axios.get('https://jsonplaceholder.typicode.com/users');
+        setUser(resultApiDadta.data);
+    }
   
     return (
   
