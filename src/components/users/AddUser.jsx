@@ -6,7 +6,7 @@ import axios from 'axios';
 export const AddUser = () => {
 
   const navigate = useNavigate();
-  const nameCompany = company.name;
+  // const nameCompany = company.name;
 
   const [user, setUser] = useState({
     name: "",
@@ -17,7 +17,7 @@ export const AddUser = () => {
     city: "",
     zipcode: "",
     phone: "",
-    nameCompany:"",
+    // nameCompany:"",
     catchPrase:"",
   });
 
@@ -37,7 +37,7 @@ export const AddUser = () => {
 
   const { name, username, 
           email, street, suite, city, zipcode, 
-          phone,  catchPrase } = user;
+          phone, catchPrase } = user;
 
   // lors du changement d'entrée
   const onInputchange = (e) => {
@@ -69,7 +69,7 @@ export const AddUser = () => {
                 <div className="col-md-4 mb-4">
                   <div className="form-group">
                     <input type="text" className="form-control"
-                            placeholder='Enter your name...' name='nameUser'
+                            placeholder='Enter your name...' name='names'
                             value={name}
                             onChange={(e) => onInputchange(e)} />
                   </div>
@@ -136,14 +136,14 @@ export const AddUser = () => {
                             onChange={(e) => onInputchange(e)} />
                   </div>
                 </div>
-                <div className="col-md-4 mb-4">
+                {/* <div className="col-md-4 mb-4">
                   <div className="form-group">
                     <input type="text" className="form-control" name='name'
                            placeholder='Enter your name company......'
                            value={name}
                            onChange={(e) => onInputchange(e)} />
                   </div>
-                </div>
+                </div> */}
               </div>
 
               <div className="row">
