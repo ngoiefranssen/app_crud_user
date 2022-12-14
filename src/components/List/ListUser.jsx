@@ -6,7 +6,7 @@ import { NavLink} from "react-router-dom";
 export const ListUser = () =>{
 
     // const {id} = useParams();
-   const [users, setUsers] = useState([]);
+   const [users, setUsers] = useState();
 
    
    useEffect(() => {
@@ -39,7 +39,7 @@ export const ListUser = () =>{
                 </thead>
                 <tbody>
                     {
-                        users?.map((user, index) =>(
+                        users.map((user, index) =>(
                             <tr>
                                 <th scope="row" key={index.id}>{index + 1}</th>
                                 <td>{user.name}</td>
