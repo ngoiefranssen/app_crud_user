@@ -63,7 +63,8 @@ export const ListUser = () =>{
                                     <NavLink className="btn btn-dark btn-sm">
                                         <i className="fa fa-edit" ></i>
                                     </NavLink>
-                                    <NavLink className="btn btn-success btn-sm ms-2">
+                                    <NavLink  to={`/edit_user/${user.id}`} 
+                                              className="btn btn-success btn-sm ms-2">
                                         <i className="fa fa-eye"></i>
                                     </NavLink>
                                     <NavLink to={`/list_user/${user.id}`} className="btn btn-danger btn-sm ms-2">
