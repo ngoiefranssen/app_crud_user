@@ -32,33 +32,41 @@ export const ListUser = () =>{
                         <th scope="col">Name</th>
                         <th scope="col">Username</th>
                         <th scope="col">Email</th>
-                        <th scope="col">city</th>
-                        <th scope="col">Name_company</th>
+                        {/* <th scope="col">Street</th> */}
+                        {/* <th scope="col">Suite</th> */}
+                        {/* <th scope="col">City</th> */}
+                        {/* <th scope="col">Zipcode</th> */}
+                        {/* <th scope="col">phone</th> */}
+                        <th scope="col">CatchPhrase</th>
                         <th scope="col">Actions</th>
                     </tr>
                 </thead>
                 <tbody>
                     {
-                        users.map((user, index) =>(
+                        users?.map((user, index) =>(
                             <tr>
-                                <th scope="row" key={user.id}>{index + 1}</th>
+                                <th scope="row" key={index}>{index + 1}</th>
                                 <td>{user.name}</td>
                                 <td>{user.username}</td>
                                 <td>{user.email}</td>
+                                {/* <td>{user.address.street}</td> */}
+                                <td>{user.address.suite}</td>
                                 <td>{user.address.city}</td>
-                                <td>{user.company.name}</td>
+                                <td>{user.address.zipcode}</td>
+                                <td>{user.phone}</td>
+                                <td>{user.company.catchPhrase}</td>
                                 <td>
                                     <NavLink className="btn btn-dark btn-sm">
-                                        <i className="fa fa-edit" aria-hidden="true"></i>
+                                        <i className="fa fa-edit" ></i>
                                     </NavLink>
                                     <NavLink className="btn btn-success btn-sm ms-2">
-                                        <i className="fa fa-eye" aria-hidden="true"></i>
+                                        <i className="fa fa-eye"></i>
                                     </NavLink>
                                     <NavLink className="btn btn-danger btn-sm ms-2">
-                                        <i className="fa fa-trash" aria-hidden="true"></i>
+                                        <i className="fa fa-trash"></i>
                                     </NavLink>  
                                     <NavLink className="btn btn-primary ms-2 btn-sm">
-                                        <i className="fa fa-user-circle-o" aria-hidden="true"></i>
+                                        <i className="fa fa-user-circle-o"></i>
                                     </NavLink>
                                 </td>
                             </tr>

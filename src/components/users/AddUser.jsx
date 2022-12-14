@@ -51,7 +51,7 @@ export const AddUser = () => {
     
       e.preventDefault();
       await axios.post('https://jsonplaceholder.typicode.com/users', user);
-      navigate('/');
+      navigate('/list_user');
   };
 
   return (
@@ -63,7 +63,7 @@ export const AddUser = () => {
 
         <div className="card">
           <div className="card-body px-4 py-5">
-            <form onSubmit={(e) =>  onSubmit(e)}>
+            <form onSubmit={(e) => onSubmit(e)}>
               <div className="row">
                 <div className="col-md-4 mb-4">
                   <div className="form-group">
@@ -83,7 +83,7 @@ export const AddUser = () => {
                 </div>
                 <div className="col-md-4 mb-4">
                   <div className="form-group">
-                    <input type="email" className="form-control" name='email'
+                    <input type="text" className="form-control" name='email'
                            placeholder='Enter your adress email...' 
                            value={email}
                            onChange={(e) => onInputchange(e)}/>
@@ -163,10 +163,10 @@ export const AddUser = () => {
                   </div>
                 </div>
               </div> */}
-              <NavLink to='/list_user' type="button" className="btn btn-outline-dark">
+              <NavLink to='/list_user' type="submit" className="btn btn-outline-dark">
                 Cancel
               </NavLink>
-              <button type="button" className="btn btn-outline-success ms-3">Register</button>
+              <button type="submit" className="btn btn-outline-success ms-3">Register</button>
             </form>
           </div>
         </div>
