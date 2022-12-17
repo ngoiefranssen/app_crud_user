@@ -18,13 +18,13 @@ export const ViewUser = () =>{
     });
 
     useEffect(() => {
+        
+        const fecthViewUser = async () => {
+            const resultViewData = await axios.get(`https://jsonplaceholder.typicode.com/users/${id}`);
+            setViewUser(resultViewData.data);
+        };
         fecthViewUser();
     },[]);
-
-    const fecthViewUser = async () => {
-        const resultViewData = await axios.get(`https://jsonplaceholder.typicode.com/users/${id}`);
-        setViewUser(resultViewData.data);
-    };
     
     return(
         <section style={{ background:"#eee" }}>

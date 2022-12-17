@@ -34,9 +34,9 @@ export const AddUser = () => {
   // };
 
 
-  const { name, username, 
+  const [ name, username, 
           email, street, suite, city, zipcode, 
-          phone, catchPrase } = user;
+          phone, catchPrase ] = user;
 
   // lors du changement d'entrée
   const onInputchange = (e) => {
