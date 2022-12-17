@@ -3,23 +3,27 @@ import { useEffect, useState } from "react";
 import { NavLink, useParams} from "react-router-dom";
 
 
-export const ListUser = () =>{
+export const ListUser = (props) =>{
 
    const {id} = useParams();
-   const [users, setUsers] = useState([]);
-
-   
-   useEffect(() => {
-        fetchDataApi();
-   },[]);
-
-   const fetchDataApi = async () =>{
+    const fetchDataApi = async () =>{
         const apiResultData = await axios.get('https://jsonplaceholder.typicode.com/users');
-        setUsers(apiResultData.data);
-   };
+        props.setUsers(apiResultData.data.map(({name, username, email}) => ({name, username, email})));
+   
+       
 
-   // delete user
-   const deleteUser = async () =>{
+  
+   
+}; useEffect(() => {
+    
+       fetchDataApi();
+       console.log('users fetched.')
+       
+   }, []);
+
+console.log(props.users)
+
+   const deleteUser = async (id) =>{
     axios.delete(`https://jsonplaceholder.typicode.com/users/${id}`);
     fetchDataApi();
    }
@@ -38,7 +42,7 @@ export const ListUser = () =>{
                         <th scope="col">Email</th>
                         {/* <th scope="col">Street</th> */}
                         {/* <th scope="col">Suite</th> */}
-                        <th scope="col">City</th>
+                        {/* <th scope="col">City</th> */}
                         {/* <th scope="col">Zipcode</th> */}
                         {/* <th scope="col">phone</th> */}
                         {/* <th scope="col">CatchPhrase</th> */}
@@ -47,15 +51,15 @@ export const ListUser = () =>{
                 </thead>
                 <tbody>
                     {
-                        users?.map((user, index) =>(
-                            <tr>
-                                <th scope="row" key={index}>{index + 1}</th>
+                        props.users?.map((user, index) =>(
+                            <tr key={index}>
+                                <th scope="row">{index + 1}</th>
                                 <td>{user.name}</td>
                                 <td>{user.username}</td>
                                 <td>{user.email}</td>
                                 {/* <td>{user.address.street}</td> */}
                                 {/* <td>{user.address.suite}</td> */}
-                                <td>{user.address.city} </td>
+                                {/* <td>{user.address.city} </td> */}
                                 {/* <td>{user.address.zipcode}</td> */}
                                 {/* <td>{user.phone}</td> */}
                                 {/* <td>{user.company.catchPhrase}</td> */}

@@ -7,8 +7,11 @@ import { ListUser } from './components/List/ListUser';
 import { AddUser } from './components/users/AddUser';
 import { EditUser } from './components/users/EditUser';
 import { ViewUser } from './components/users/ViewUser';
+import { useState } from 'react';
 
 export default function App() {
+
+  const [users, setUsers] = useState([]);
 
   return (
     <>
@@ -16,8 +19,8 @@ export default function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/about' element={<About />} />
-        <Route path='/list_user' element={<ListUser />} />
-        <Route path='/add_user' element={<AddUser />} />
+        <Route path='/list_user' element={<ListUser users={users} setUsers={setUsers} />} />
+        <Route path='/add_user' element={<AddUser users={users} setUsers={setUsers} />} />
         <Route path='/edit_user/:id' element={<EditUser />} />
         <Route path='/view_user/:id' element={<ViewUser />} />
       </Routes>

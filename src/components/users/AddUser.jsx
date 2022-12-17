@@ -3,7 +3,7 @@ import { NavLink, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import axios from 'axios';
 
-export const AddUser = () => {
+export const AddUser = (props) => {
 
   let navigate = useNavigate();
   // const nameCompany = company.name;
@@ -12,13 +12,13 @@ export const AddUser = () => {
     name: "",
     username: "",
     email: "",
-    street: "",
-    suite: "",
-    city: "",
-    zipcode: "",
-    phone: "",
+    // street: "",
+    // suite: "",
+    // city: "",
+    // zipcode: "",
+    // phone: "",
     // nameCompany:"",
-    catchPrase: "",
+    // catchPrase: "",
 });
 
   // const handleChange = (e) =>{
@@ -33,10 +33,10 @@ export const AddUser = () => {
   //   };
   // };
 
-
-  const [ name, username, 
-          email, street, suite, city, zipcode, 
-          phone, catchPrase ] = user;
+ 
+  const { name, username, 
+          email,  
+          /* phone */} = user;
 
   // lors du changement d'entrée
   const onInputchange = (e) => {
@@ -49,7 +49,10 @@ export const AddUser = () => {
   // sur soumettre  
   const onSubmit = async (e) => {
       e.preventDefault();
-      await axios.post('https://jsonplaceholder.typicode.com/users', user);
+      
+      const res =  await axios.post('https://jsonplaceholder.typicode.com/users', user);
+      props.setUsers([...props.users, res.data, ])
+      // console.log([res.data, ...props.users])
       navigate('/list_user');
   };
 
@@ -90,7 +93,7 @@ export const AddUser = () => {
                 </div>
               </div>
 
-              <div className="row">
+              {/* <div className="row">
                 <div className="col-md-4 mb-4">
                   <div className="form-group">
                     <input type="text" className="form-control" name='street'
@@ -115,24 +118,24 @@ export const AddUser = () => {
                            onChange={(e) => onInputchange(e)} />
                   </div>
                 </div>
-              </div>
+              </div> */}
 
               <div className="row">
-                <div className="col-md-4 mb-4">
+                {/* <div className="col-md-4 mb-4">
                   <div className="form-group">
                     <input type="text" className="form-control" name='zipcode'
                             placeholder='Enter your zipcode .....'
                             value={zipcode}
                             onChange={(e) => onInputchange(e)} />
                   </div>
-                </div>
+                </div> */}
                 <div className="col-md-4 mb-4">
-                  <div className="form-group">
+                  {/* <div className="form-group">
                     <input type="text"  className="form-control" name='phone'
                             placeholder='Enter your phone number....'
                             value={phone}
                             onChange={(e) => onInputchange(e)} />
-                  </div>
+                  </div> */}
                 </div>
                 {/* <div className="col-md-4 mb-4">
                   <div className="form-group">
@@ -142,14 +145,14 @@ export const AddUser = () => {
                            onChange={(e) => onInputchange(e)} />
                   </div>
                 </div> */}
-                <div className="col-md-4 mb-4">
+                {/* <div className="col-md-4 mb-4">
                   <div className="form-group mb-4">
                     <input type="text" className="form-control" name='catchPrase'
                            placeholder='Enter your catch phrase.........'
                            value={catchPrase}
                            onChange={(e) => onInputchange(e)} />
                   </div>
-                </div>
+                </div> */}
               </div>
 
               {/* <div className="row">
